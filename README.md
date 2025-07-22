@@ -2,6 +2,8 @@
 
 Uma ferramenta web 100% client-side, projetada para comparar e filtrar listas de contatos de forma rápida, segura e eficiente, otimizando processos manuais de gestão de grupos.
 
+[![Badge Acessar Aplicação](https://img.shields.io/badge/Acessar%20Aplica%C3%A7%C3%A3o-4A90E2?style=for-the-badge&logo=rocket)](https://rafaelmaiia.github.io/whatsapp-leads-cleaner/)
+
 ![Badge de Licença](https://img.shields.io/badge/licen%C3%A7a-MIT-green)
 ![Badge de Tecnologia](https://img.shields.io/badge/tecnologia-JavaScript-yellow)
 ![Badge de Estilo](https://img.shields.io/badge/estilo-TailwindCSS-blue)
@@ -10,7 +12,7 @@ Uma ferramenta web 100% client-side, projetada para comparar e filtrar listas de
 
 ### Visão Geral do Projeto
 
-https://github.com/rafaelmaiia/whatsapp-leads-cleaner/blob/main/assets/demonstracao.gif
+![Demonstração da Ferramenta](https://github.com/rafaelmaiia/whatsapp-leads-cleaner/blob/main/assets/demonstracao.gif)
 
 
 Este projeto nasceu de uma necessidade real de otimizar um processo manual e repetitivo: verificar quais contatos de uma grande lista de compradores já se encontravam em um grupo de WhatsApp. A ferramenta permite que o usuário faça o upload de duas listas em formato `.csv` e instantaneamente gera uma lista final com os contatos que precisam ser adicionados, pronta para ser usada.
@@ -30,7 +32,7 @@ Este projeto nasceu de uma necessidade real de otimizar um processo manual e rep
 
 ### Como Usar
 
-1.  Abra o arquivo `index.html` em seu navegador ou acesse o link da aplicação (se hospedado).
+1.  Abra o arquivo `index.html` em seu navegador ou acesse o link da aplicação.
 2.  Clique em "Escolher Arquivo" para fazer o upload da sua lista de compradores.
 3.  Clique no segundo botão para fazer o upload da lista de membros do grupo.
 4.  Clique em "Gerar Lista para Contato".
