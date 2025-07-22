@@ -149,7 +149,6 @@
             }
         }
 
-        // Adicione esta função:
         function generateFinalList() {
             const groupMembersSuffixes = new Set(
                 groupMembersList.map(num => num.slice(-6))
@@ -193,6 +192,27 @@
         generateListBtn.addEventListener('click', () => {
             if (generateListBtn.disabled) return;
             generateFinalList();
+        });
+
+        copyListBtn.addEventListener('click', () => {
+            if (!resultListTextarea.value || resultListTextarea.value === "Sua lista final aparecerá aqui.") {
+                return;
+            }
+            if (navigator.clipboard) {
+                 navigator.clipboard.writeText(resultListTextarea.value).then(() => {
+                    copyBtnText.textContent = 'Copiado!';
+                    setTimeout(() => {
+                        copyBtnText.textContent = 'Copiar Lista';
+                    }, 2000);
+                 });
+            } else {
+                resultListTextarea.select();
+                document.execCommand('copy');
+                copyBtnText.textContent = 'Copiado!';
+                setTimeout(() => {
+                    copyBtnText.textContent = 'Copiar Lista';
+                }, 2000);
+            }
         });
     </script>
 </body>
