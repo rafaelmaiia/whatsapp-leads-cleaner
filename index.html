@@ -149,6 +149,24 @@
             }
         }
 
+        // Adicione esta função:
+        function generateFinalList() {
+            const groupMembersSuffixes = new Set(
+                groupMembersList.map(num => num.slice(-6))
+            );
+
+            const finalContacts = buyersList.filter(buyer => {
+                const buyerSuffix = buyer.cleaned.slice(-6);
+                return !groupMembersSuffixes.has(buyerSuffix);
+            });
+
+            const cleanedNumbersToDisplay = finalContacts.map(buyer => buyer.cleaned);
+
+            resultListTextarea.value = cleanedNumbersToDisplay.join('\n');
+            resultCount.textContent = `${cleanedNumbersToDisplay.length} contato(s) encontrado(s).`;
+            resultSection.classList.remove('hidden');
+        }
+
         // --- Event Listeners ---
         buyersFileInput.addEventListener('change', (event) => {
             const file = event.target.files[0];
@@ -170,6 +188,11 @@
                     checkFilesAndUpdateButton();
                 }, false);
             }
+        });
+
+        generateListBtn.addEventListener('click', () => {
+            if (generateListBtn.disabled) return;
+            generateFinalList();
         });
     </script>
 </body>
